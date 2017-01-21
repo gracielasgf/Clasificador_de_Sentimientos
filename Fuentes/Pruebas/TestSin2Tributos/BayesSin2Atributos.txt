@@ -1,0 +1,76 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     feelings
+Instances:    160
+Attributes:   5
+              AdjetivoPositivo
+              AdjetivoNegativo
+              VerboPositivo
+              VerboNegativo
+              Feelings
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                      Class
+Attribute          positivo negativo   neutro
+                     (0.32)   (0.37)   (0.31)
+==============================================
+AdjetivoPositivo
+  mean                1.5098   0.0833   0.0612
+  std. dev.           0.7764   0.2764   0.2397
+  weight sum              51       60       49
+  precision                1        1        1
+
+AdjetivoNegativo
+  mean                0.2549   1.5333   0.0204
+  std. dev.           0.5889   0.8654   0.1667
+  weight sum              51       60       49
+  precision                1        1        1
+
+VerboPositivo
+  mean                     1     0.05        0
+  std. dev.           0.3961   0.2843   0.1667
+  weight sum              51       60       49
+  precision                1        1        1
+
+VerboNegativo
+  mean                     0     0.95        0
+  std. dev.           0.1667   0.7399   0.1667
+  weight sum              51       60       49
+  precision                1        1        1
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         149               93.125  %
+Incorrectly Classified Instances        11                6.875  %
+Kappa statistic                          0.8966
+Mean absolute error                      0.05  
+Root mean squared error                  0.1819
+Relative absolute error                 11.2889 %
+Root relative squared error             38.6668 %
+Total Number of Instances              160     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,922    0,055    0,887      0,922    0,904      0,858    0,971     0,924     positivo
+                 0,933    0,020    0,966      0,933    0,949      0,920    0,968     0,962     negativo
+                 0,939    0,027    0,939      0,939    0,939      0,912    0,991     0,975     neutro
+Weighted Avg.    0,931    0,033    0,932      0,931    0,932      0,898    0,976     0,954     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 47  2  2 |  a = positivo
+  3 56  1 |  b = negativo
+  3  0 46 |  c = neutro
+

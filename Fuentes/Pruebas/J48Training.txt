@@ -1,0 +1,64 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     feelings
+Instances:    151
+Attributes:   5
+              AdjetivoPositivo
+              AdjetivoNegativo
+              VerboPositivo
+              VerboNegativo
+              Feelings
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+VerboPositivo <= 0
+|   AdjetivoNegativo <= 0
+|   |   VerboNegativo <= 0: neutro (51.0/3.0)
+|   |   VerboNegativo > 0: negativo (2.0)
+|   AdjetivoNegativo > 0: negativo (49.0/3.0)
+VerboPositivo > 0
+|   VerboNegativo <= 0: positivo (47.0)
+|   VerboNegativo > 0: negativo (2.0)
+
+Number of Leaves  : 	5
+
+Size of the tree : 	9
+
+
+Time taken to build model: 0.02 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         145               96.0265 %
+Incorrectly Classified Instances         6                3.9735 %
+Kappa statistic                          0.9404
+Mean absolute error                      0.0505
+Root mean squared error                  0.1589
+Relative absolute error                 11.366  %
+Root relative squared error             33.7135 %
+Total Number of Instances              151     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,922    0,000    1,000      0,922    0,959      0,941    0,963     0,955     positivo
+                 0,980    0,030    0,943      0,980    0,962      0,942    0,981     0,939     negativo
+                 0,980    0,029    0,941      0,980    0,960      0,941    0,980     0,932     neutro
+Weighted Avg.    0,960    0,020    0,962      0,960    0,960      0,941    0,975     0,942     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 47  2  2 |  a = positivo
+  0 50  1 |  b = negativo
+  0  1 48 |  c = neutro
+

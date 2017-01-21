@@ -1,0 +1,90 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     feelings
+Instances:    2114
+Attributes:   7
+              AdjetivoPositivo
+              AdjetivoNegativo
+              Conjunciones
+              negacion
+              VerboPositivo
+              VerboNegativo
+              Feelings
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                      Class
+Attribute          positivo negativo   neutro
+                     (0.34)   (0.34)   (0.32)
+==============================================
+AdjetivoPositivo
+  mean                1.5098   0.0784   0.0612
+  std. dev.           0.7764   0.2688   0.2397
+  weight sum             714      714      686
+  precision                1        1        1
+
+AdjetivoNegativo
+  mean                0.2549    1.451   0.0204
+  std. dev.           0.5889    0.824   0.1667
+  weight sum             714      714      686
+  precision                1        1        1
+
+Conjunciones
+  mean                0.8824   0.6471   0.7551
+  std. dev.           0.6758   0.6515   0.7962
+  weight sum             714      714      686
+  precision                1        1        1
+
+negacion
+  mean                0.1176   0.0784        0
+  std. dev.           0.3782   0.2688   0.1667
+  weight sum             714      714      686
+  precision                1        1        1
+
+VerboPositivo
+  mean                     1   0.0588        0
+  std. dev.           0.3961   0.3075   0.1667
+  weight sum             714      714      686
+  precision                1        1        1
+
+VerboNegativo
+  mean                     0   0.9412        0
+  std. dev.           0.1667   0.7252   0.1667
+  weight sum             714      714      686
+  precision                1        1        1
+
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        2012               95.175  %
+Incorrectly Classified Instances       102                4.825  %
+Kappa statistic                          0.9276
+Mean absolute error                      0.0416
+Root mean squared error                  0.1515
+Relative absolute error                  9.3585 %
+Root relative squared error             32.1323 %
+Total Number of Instances             2114     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,922    0,030    0,940      0,922    0,931      0,896    0,993     0,987     positivo
+                 0,955    0,020    0,961      0,955    0,958      0,936    0,992     0,990     negativo
+                 0,980    0,022    0,955      0,980    0,967      0,951    0,997     0,995     neutro
+Weighted Avg.    0,952    0,024    0,952      0,952    0,952      0,927    0,994     0,990     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 658  28  28 |   a = positivo
+  28 682   4 |   b = negativo
+  14   0 672 |   c = neutro
+

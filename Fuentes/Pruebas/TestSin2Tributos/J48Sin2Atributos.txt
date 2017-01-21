@@ -1,0 +1,61 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     feelings
+Instances:    160
+Attributes:   5
+              AdjetivoPositivo
+              AdjetivoNegativo
+              VerboPositivo
+              VerboNegativo
+              Feelings
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+VerboPositivo <= 0
+|   AdjetivoNegativo <= 0
+|   |   VerboNegativo <= 0: neutro (51.0/3.0)
+|   |   VerboNegativo > 0: negativo (2.0)
+|   AdjetivoNegativo > 0: negativo (58.0/3.0)
+VerboPositivo > 0
+|   VerboNegativo <= 0: positivo (47.0)
+|   VerboNegativo > 0: negativo (2.0)
+
+Number of Leaves  : 	5
+
+Size of the tree : 	9
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         148               92.5    %
+Incorrectly Classified Instances        12                7.5    %
+Kappa statistic                          0.8872
+Mean absolute error                      0.0697
+Root mean squared error                  0.2092
+Relative absolute error                 15.7316 %
+Root relative squared error             44.468  %
+Total Number of Instances              160     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,922    0,037    0,922      0,922    0,922      0,885    0,934     0,941     positivo
+                 0,917    0,030    0,948      0,917    0,932      0,893    0,955     0,890     negativo
+                 0,939    0,045    0,902      0,939    0,920      0,884    0,958     0,883     neutro
+Weighted Avg.    0,925    0,037    0,926      0,925    0,925      0,888    0,949     0,904     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 47  2  2 |  a = positivo
+  2 55  3 |  b = negativo
+  2  1 46 |  c = neutro
+
